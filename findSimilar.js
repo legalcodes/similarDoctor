@@ -1,3 +1,4 @@
+
 /* Model Data */
 
 var doctors = [
@@ -81,4 +82,21 @@ var doctors = [
 
 ];
 
-console.log(doctors.length);
+var filter = function(collection, callback){
+		var results = [];
+		for (var i = 0; i < collection.length; i++){
+				if (callback(collection[i])){
+						results.push(collection[i]);
+				}
+		};
+		return results;
+};
+
+
+var findSimilar = function(targetDoctor){
+		// return doctors from same area as passed in doctor
+		var results = filter(doctors, function(doctor){
+				return doctor.area === targetDoctor.area;
+		});
+		return results;
+};
