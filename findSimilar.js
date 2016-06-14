@@ -1,58 +1,84 @@
 /* Model Data */
 
-var doctors = {};
+var doctors = [
+		{
+				name: 'Kiira',
+				specialty: 'neurological',
+				area: 'surgery',
+				review: 9,
+				experience: 9
+		},
+		{
+				name: 'Matt',
+				specialty: 'thoracic',
+				area: 'surgery',
+				review: 8,
+				experience: 8
+		},
+		{
+				name: 'Count',
+				specialty: 'opthalmic',
+				area: 'surgery',
+				review: 7,
+				experience: 7
+		},
+		{
+				name: 'Chris',
+				specialty: 'neurological',
+				area: 'surgery',
+				review: 6,
+				experience: 6
+		},
+		{
+				name: 'Scott',
+				specialty: 'chronic',
+				area: 'dermatology',
+				review: 5,
+				experience: 5
+		},
+		{
+				name: 'Nathaniel',
+				specialty: 'cosmetic',
+				area: 'dermatology',
+				review: 4,
+				experience: 4
+		},
+		{
+				name: 'Alfredo',
+				specialty: 'medical',
+				area: 'dermatology',
+				review: 3,
+				experience: 3
+		},
+		{
+				name: 'Duke',
+				specialty: 'surgical',
+				area: 'dermatology',
+				review: 2,
+				experience: 2
+		},
+		{
+				name: 'Humphrey',
+				specialty: 'cosmetic',
+				area: 'dermatology',
+				review: 1,
+				experience: 1
+		},
+		{
+				name: 'Dana',
+				specialty: 'medical',
+				area: 'dermatology',
+				review: 9,
+				experience: 9
+		},
+		{
+				name: 'Fox',
+				specialty: 'surgical',
+				area: 'urology',
+				review: 8,
+				experience: 8
+		}
 
-doctors.Scott = {
-		specialty: 'chronic',
-		area: 'urology',
-		review: 9,
-		experience: 4
-};
-doctors.Kiira = {
-		specialty: 'chronic',
-		area: 'urology',
-		review: 9,
-		experience: 4
-};
-doctors.Matthew = {
-		specialty: 'chronic',
-		area: 'urology',
-		review: 9,
-		experience: 4
-};
-doctors.Benjamin = {
-		specialty: 'chronic',
-		area: 'urology',
-		review: 9,
-		experience: 4
-};
-doctors.Negar = {
-		specialty: 'chronic',
-		area: 'urology',
-		review: 9,
-		experience: 4
-};
-doctors.Julian = {
-		specialty: 'chronic',
-		area: 'urology',
-		review: 9,
-		experience: 4
-};
-doctors.Preston = {
-		specialty: 'chronic',
-		area: 'urology',
-		review: 9,
-		experience: 4
-};
-doctors.Lindsay = {
-		specialty: 'chronic',
-		area: 'urology',
-		review: 9,
-		experience: 4
-};
-doctors.Donald = {
-		specialty: 'chronic',
-		area: 'urology',
-		review: 9,
-		experience: 4
-};
+];
+
+console.log(doctors.length);
