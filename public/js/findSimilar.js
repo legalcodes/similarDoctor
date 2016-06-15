@@ -82,23 +82,33 @@ window.doctors = [
 ];
 
 var filter = function(collection, callback){
-		var results = {};
+		var results = [];
 		for (var i = 0; i < collection.length; i++){
 				if (callback(collection[i])){
-						results[collection[i].name] = 0;
+						results.push(collection[i]);
 				}
 		};
 		return results;
 };
 
 
-var FindSimilar = function(targetDoctor){
-		// create collection of doctors with matching area
-		var results = filter(doctors, function(doctor){
-				return doctor.area === targetDoctor.area;
+var findSimilar = function(collection, targetDoctor){
+		// filter subset of doctors with matching area
+		var subset = filter(collection, function(doctor){
+				return doctor.area === targetDoctor.area &&
+						doctor.name !== targetDoctor.name;
 		});
 
+		// traverse collection to generate similarity score
+		for (var i = 0; i < subset.length; i++){
+				var doctor = subset[i];
+				doctor.similarity = 0;
+				// add 10 points for same specialty
+				if (doctor.specialty === targetDoctor.specialty){
+						doctor.similarity += 10;
+				}
+		};
 
-		console.log(results);
-		return results;
+		console.log('Output: ', subset);
+		return subset;
 };
