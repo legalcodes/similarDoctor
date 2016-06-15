@@ -1,26 +1,16 @@
 <html>
   <head>
-    <title>Find Similar Test Suite</title>
+    <title>Find Similar Doctor Test Suite</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="lib/browser/mocha.css" />
     <script src="./lib/mocha.js"></script>
     <script src="./lib/chai.js"></script>
     <script>mocha.setup('bdd')</script>
-    <script>
-      function assert(expr, msg) {
-        if (!expr) throw new Error(msg || 'failed');
-      }
-    </script>
     <script src="../public/js/findSimilar.js"></script>
     <script src="./findSimilarSpec.js"></script>
     <script>
       onload = function(){
         var runner = mocha.run();
-        // runner.globals(['foo', 'bar', 'baz']);
-
-        // runner.on('test end', function(test){
-        //   console.log(test.fullTitle());
-        // });
       };
     </script>
   </head>
