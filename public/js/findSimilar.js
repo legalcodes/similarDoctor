@@ -1,6 +1,6 @@
 /* Model Data */
 
-window.doctors = [
+var doctors = [
 		{
 				name: 'Kiira',
 				specialty: 'neurological',
@@ -107,8 +107,10 @@ var findSimilar = function(collection, targetDoctor){
 				if (doctor.specialty === targetDoctor.specialty){
 						doctor.similarity += 10;
 				}
+				// add as many points as are assigned to review & experience
+				doctor.similarity += doctor.review + doctor.experience;
 		};
 
-		console.log('Output: ', subset);
+
 		return subset;
 };
