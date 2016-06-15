@@ -9,7 +9,6 @@ var filter = function(collection, callback){
 		return results;
 };
 
-
 var findSimilar = function(collection, targetDoctor){
 		// filter subset of doctors with matching area
 		var subset = filter(collection, function(doctor){
@@ -29,13 +28,10 @@ var findSimilar = function(collection, targetDoctor){
 				doctor.similarity += doctor.review + doctor.experience;
 		};
 
-		console.log('unsorted: ', subset);
-
-		// order by similarity score
+		// order results by similarity score
 		subset.sort(function(a,b){
 				return b.similarity - a.similarity;
 		});
 
-		console.log('sorted: ', subset);
 		return subset;
 };

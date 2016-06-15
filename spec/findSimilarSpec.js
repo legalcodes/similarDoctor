@@ -1,10 +1,7 @@
 var expect = chai.expect;
 describe('findSimilar', function() {
-
-		describe('classFeatures', function(){
-
+		describe('function features', function(){
 				/* Model Data */
-
 				var doctors = [
 						{
 								name: 'Kiira',
@@ -121,9 +118,6 @@ describe('findSimilar', function() {
 						}
 				];
 
-
-
-
 				it('Should only return doctors from the same area', function(){
 						var testSet = findSimilar(doctors, doctors[0]);
 						expect(testSet[0].area).to.equal(testSet[1].area);
@@ -164,7 +158,6 @@ describe('findSimilar', function() {
 						};
 
 						var isOrderedBySimilarity = checkOrder(testSet4);
-
 						expect(isOrderedBySimilarity).to.be.true;
 				});
 		});
